@@ -1,4 +1,4 @@
-{:deps {io.github.nextjournal/clerk {:git/sha "a35e22dc0d4389284ac21dfc7d017f23941fb561"}}
+{:deps {io.github.nextjournal/clerk {:git/sha "eaa26094c69828f6de00041b38e33403d849b42f"}}
  :aliases {:dev {:extra-paths ["dev"]}
            :nextjournal/clerk {:exec-fn nextjournal.clerk/build-static-app!
                                :exec-args {:paths ["index.clj"]}}}}

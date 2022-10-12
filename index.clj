@@ -24,9 +24,8 @@
    [:path {:fill-rule "evenodd", :clip-rule "evenodd", :d "M12 0.375C12.21 0.374864 12.4159 0.433521 12.5943 0.54433C12.7727 0.65514 12.9165 0.813678 13.0095 1.002L15.8325 6.7245L22.1475 7.6425C22.3552 7.67266 22.5503 7.76033 22.7108 7.89558C22.8713 8.03082 22.9907 8.20827 23.0556 8.40785C23.1206 8.60743 23.1284 8.8212 23.0781 9.02498C23.0279 9.22876 22.9217 9.41443 22.7715 9.561L18.2025 14.016L19.281 20.304C19.3166 20.5109 19.2935 20.7236 19.2145 20.9181C19.1355 21.1126 19.0036 21.2811 18.8338 21.4045C18.664 21.528 18.4631 21.6015 18.2537 21.6166C18.0443 21.6318 17.8348 21.5881 17.649 21.4905L12 18.5205L6.351 21.4905C6.16528 21.588 5.956 21.6317 5.74679 21.6165C5.53757 21.6014 5.33676 21.528 5.16703 21.4048C4.99729 21.2815 4.86539 21.1133 4.78622 20.919C4.70706 20.7248 4.68377 20.5123 4.719 20.3055L5.799 14.0145L1.227 9.561C1.07635 9.41448 0.969751 9.2287 0.91928 9.0247C0.868809 8.82071 0.876485 8.60665 0.941439 8.40679C1.00639 8.20693 1.12603 8.02926 1.28679 7.89392C1.44754 7.75857 1.643 7.67095 1.851 7.641L8.166 6.7245L10.9905 1.002C11.0835 0.813678 11.2273 0.65514 11.4057 0.54433C11.5841 0.433521 11.79 0.374864 12 0.375V0.375ZM12 4.0425L9.9225 8.25C9.84183 8.41335 9.72268 8.55467 9.57532 8.66179C9.42795 8.76892 9.25678 8.83865 9.0765 8.865L4.431 9.54L7.791 12.816C7.92173 12.9433 8.01954 13.1005 8.07598 13.274C8.13243 13.4475 8.14582 13.6322 8.115 13.812L7.323 18.438L11.4765 16.254C11.6379 16.1691 11.8176 16.1248 12 16.1248C12.1824 16.1248 12.3621 16.1691 12.5235 16.254L16.6785 18.438L15.8835 13.812C15.8527 13.6322 15.8661 13.4475 15.9225 13.274C15.979 13.1005 16.0768 12.9433 16.2075 12.816L19.5675 9.5415L14.9235 8.8665C14.7432 8.84015 14.5721 8.77042 14.4247 8.66329C14.2773 8.55617 14.1582 8.41485 14.0775 8.2515L12 4.041V4.0425Z", :fill "currentColor"}]])
 
 (def stars-badge
-  [:div.py-1.px-2.rounded-full.text-greenish.ml-2.flex.items-center.bg-greenish-30
-   {:class "h-[22px]"}
-   786])
+  [:div.py-1.px-2.rounded-full.text-greenish.text-center.ml-2.flex.items-center.bg-greenish-30.stars-badge
+   {:class "h-[22px] min-w-[48px]"}])
 
 (def emacs-icon
   [:svg {:width "42", :height "42", :viewbox "0 0 42 42", :fill "none", :xmlns "http://www.w3.org/2000/svg"}
@@ -54,22 +53,51 @@
   [:svg {:width "46", :height "46", :viewbox "0 0 46 46", :fill "none", :xmlns "http://www.w3.org/2000/svg"}
    [:path {:d "M23 44C32.7827 44 41.003 37.3108 43.3366 28.2569M23 44C13.2173 44 4.99698 37.3108 2.66336 28.2569M23 44C28.799 44 33.5 34.598 33.5 23C33.5 11.402 28.799 2 23 2M23 44C17.201 44 12.5 34.598 12.5 23C12.5 11.402 17.201 2 23 2M23 2C30.8521 2 37.6977 6.30953 41.3005 12.6924M23 2C15.1479 2 8.30232 6.30953 4.69949 12.6924M41.3005 12.6924C36.3927 16.9342 29.996 19.5 23 19.5C16.004 19.5 9.60729 16.9342 4.69949 12.6924M41.3005 12.6924C43.0192 15.7373 44 19.2541 44 23C44 24.8153 43.7697 26.5768 43.3366 28.2569M43.3366 28.2569C37.3112 31.5977 30.3778 33.5 23 33.5C15.6222 33.5 8.68879 31.5977 2.66336 28.2569M2.66336 28.2569C2.23033 26.5768 2 24.8153 2 23C2 19.2541 2.98076 15.7373 4.69949 12.6924", :stroke "currentColor", :stroke-width "2.5", :stroke-linecap "round", :stroke-linejoin "round"}]])
 
-(def twitter-viewer
+(def js-behaviors
   {:transform-fn clerk/mark-presented
    :render-fn '(fn []
                  (v/html
-                  [:div {:ref (fn [el]
-                                (when (and el (not (js/document.getElementById "twitter-js")))
-                                  (let [twitter-js (doto (js/document.createElement "script")
-                                                     (.setAttribute "src" "https://platform.twitter.com/widgets.js")
-                                                     (.setAttribute "async" true)
-                                                     (.setAttribute "charset" "utf-8")
-                                                     (.setAttribute "id" "twitter-js"))]
-                                    (.. js/document (querySelector "head") (appendChild twitter-js)))))}]))})
+                  [:div
+                   {:ref (fn [el]
+                           (when (and el (not (js/document.getElementById "twitter-js")))
+                             (let [twitter-js (doto (js/document.createElement "script")
+                                                (.setAttribute "src" "https://platform.twitter.com/widgets.js")
+                                                (.setAttribute "async" true)
+                                                (.setAttribute "charset" "utf-8")
+                                                (.setAttribute "id" "twitter-js"))
+                                   scroll-el (js/document.querySelector ".scroll-container")
+                                   !scroll-anim (atom nil)
+                                   scroll-to-anchor! (fn [anchor]
+                                                       (let [scroll-top (.-scrollTop scroll-el)
+                                                             offset 40]
+                                                         (swap! !scroll-anim
+                                                                nil
+                                                                (framer-motion/animate
+                                                                 scroll-top
+                                                                 (+ scroll-top(.. (js/document.getElementById (subs anchor 1)) getBoundingClientRect -top))
+                                                                 (j/lit {:onUpdate #(j/assoc! scroll-el :scrollTop (- % offset))
+                                                                         :onComplete #(.pushState js/history (j/lit {}) "" anchor)
+                                                                         :type :spring
+                                                                         :duration 0.4
+                                                                         :bounce 0.15})))))]
+                               (.. js/document (querySelector "head") (appendChild twitter-js))
+                               (.. js/document (addEventListener "click" (fn [e]
+                                                                           (when (.. e -target (matches ".page-scroll-links a"))
+                                                                             (.preventDefault e)
+                                                                             (scroll-to-anchor! (.. e -target (getAttribute "href")))))))
+                               (-> (js/fetch "http://api.github.com/repos/nextjournal/clerky")
+                                   (.then (fn [res] (.json res)))
+                                   (.then (fn [data]
+                                            (if-let [stars (.-stargazers_count data)]
+                                              (j/assoc! (js/document.querySelector ".stars-badge") :innerHTML stars)
+                                              (throw (js/Error. "stargazers_count missing in response data")))))
+                                   (.catch (fn [e]
+                                             (js/console.error e)
+                                             (.. (js/document.querySelector ".stars-badge") -classList (add "hidden"))))))))}]))})
 
 {::clerk/visibility {:result :show}}
 
-(clerk/with-viewer twitter-viewer nil)
+(clerk/with-viewer js-behaviors nil)
 
 (clerk/html
  [:<>
@@ -83,6 +111,7 @@
    body { background: #000 !important; font-family: 'Inter', sans-serif; color: var(--greenish); }
    #clerk-static-app > div { background: #000 !important; }
    #clerk-static-app .viewer-notebook > :first-child { display: none; }
+   .dark-mode-toggle { display: none; }
    a { color: var(--greenish); transition: all 0.125s ease;}
    a:hover { color: white; }
    .viewer-notebook { padding: 0; }
@@ -109,7 +138,7 @@
 ^{::clerk/width :full}
 (clerk/html
  [:div.px-8.lg:px-0.lg:container.md:mx-auto.not-prose
-  [:nav.separator-bottom.pt-12.pb-4.text-sm.flex.justify-between
+  [:nav.separator-bottom.pt-12.pb-4.text-sm.flex.justify-between.page-scroll-links
    [:ul.flex
     [:li.mr-4 [:a {:href "#features"} "Features"]]
     [:li.mr-4 [:a {:href "#use-cases"} "Use Cases"]]
@@ -135,7 +164,7 @@
      "Clerk logo by Jack Rusher."
      [:br]
      [:a.link-hairline.text-greenish-60 {:href "#"} "See notebook here."]]]]
-  [:div.mt-10
+  [:div#features.mt-10
    [:h2.section-heading.pt-4.text-sm
     [:span.font-iosevka.font-medium.uppercase.text-greenish "Features"]
     [:a.text-greenish-60.font-inter.font-normal.ml-3 {:href "https://github.clerk.garden/nextjournal/book-of-clerk/"} "Learn more in the Book of Clerk"]]
@@ -176,7 +205,7 @@
      [:span.text-xl.font-iosevka "Static Publishing"]
      [:p.mt-2.text-sm.text-greenish-60
       "Produce static HTML pages and serve them from your local file system or any static webserver. If you like it batteries-included, take a look at clerk.garden, Clerk's upcoming GitHub-based publishing platform."]]]]
-  [:div.mt-20
+  [:div#use-cases.mt-20
    [:h2.section-heading.pt-4.text-sm
     [:span.font-iosevka.font-medium.uppercase.text-greenish "Use Cases"]
     [:a.text-greenish-60.font-inter.font-normal.ml-3 {:href "https://github.com/nextjournal/clerk-demo"} "See Clerk Demos Repository"]]
@@ -202,7 +231,7 @@
     [:a.group {:href "https://github.com/zampino/osc-spirograph/"}
      [:img {:src "https://cdn.nextjournal.com/data/QmZHUCVDFnixs4vr4pxqnCuMjJhckZRm1mcYT9r3zY27qa?filename=spiro.png&content-type=image/png"}]
      [:div.font-inter.text-greenish-60.mt-2.group-hover:text-white.transition-all "Controlling a spirograph animation using Open Sound Control and your iPhone"]]]
-   [:div.mt-20
+   [:div#quotes.mt-20
     [:h2.section-heading.pt-4.text-sm
      [:span.font-iosevka.font-medium.uppercase.text-greenish "Quotes"]
      [:a.text-greenish-60.font-inter.font-normal.ml-3 {:href "https://twitter.com/search?q=clerk%20clojure&src=spelling_expansion_revert_click&f=live"} "See more on Twitter"]]
@@ -239,7 +268,7 @@
         [:a {:href "https://twitter.com/usenextjournal?ref_src=twsrc%5Etfw"} "@usenextjournal"]" progressed from being &quot;an alternative&quot; to being at the forefront of notebooks and by far the most Clojurey of them all. We really need work like that in the Clojure data ecosystem. " 
         [:a {:href "https://t.co/hNf9vygq8S"} "https://t.co/hNf9vygq8S"]]"— Simon Belak (@sbelak) " 
        [:a {:href "https://twitter.com/sbelak/status/1409546462384603136?ref_src=twsrc%5Etfw"} "June 28, 2021"]]]]]
-   [:div.mt-20
+   [:div#talks.mt-20
     [:h2.section-heading.pt-4.text-sm
      [:span.font-iosevka.font-medium.uppercase.text-greenish "Talks"]]
     [:div.mt-10.grid.md:grid-cols-2.gap-6
