@@ -81,6 +81,8 @@
      --greenish-30: rgba(146, 189, 154, 0.3)
    }
    body { background: #000 !important; font-family: 'Inter', sans-serif; color: var(--greenish); }
+   #clerk-static-app > div { background: #000 !important; }
+   #clerk-static-app .viewer-notebook > :first-child { display: none; }
    a { color: var(--greenish); transition: all 0.125s ease;}
    a:hover { color: white; }
    .viewer-notebook { padding: 0; }
