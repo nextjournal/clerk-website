@@ -85,7 +85,7 @@
                                                                            (when (.. e -target (matches ".page-scroll-links a"))
                                                                              (.preventDefault e)
                                                                              (scroll-to-anchor! (.. e -target (getAttribute "href")))))))
-                               (-> (js/fetch "http://api.github.com/repos/nextjournal/clerk")
+                               (-> (js/fetch "https://api.github.com/repos/nextjournal/clerk")
                                    (.then (fn [res] (.json res)))
                                    (.then (fn [data]
                                             (if-let [stars (.-stargazers_count data)]
