@@ -7,7 +7,7 @@
            (java.net URL)))
 
 (def clerk-type
-  [:svg {:width "135", :height "62", :viewbox "0 0 135 62", :fill "none", :xmlns "http://www.w3.org/2000/svg" :alt "Clerk"}
+  [:svg.flex-shrink-0 {:width "135", :height "62", :viewbox "0 0 135 62", :fill "none", :xmlns "http://www.w3.org/2000/svg" :alt "Clerk"}
    [:path {:fill-rule "evenodd", :clip-rule "evenodd", :d "M19.9531 39.1211V52.569C19.9531 57.4591 17.4589 59.9042 12.4707 59.9042H9.88746C4.81011 59.9042 2.31598 57.4591 2.31598 52.569V9.43099C2.31598 4.54084 4.81011 2.09577 9.88746 2.09577H12.3816C17.3699 2.09577 19.864 4.54084 19.864 9.43099V21.0451H22.18V9.43099C22.18 3.23099 18.8842 0 12.3816 0H9.88746C3.38489 0 0 3.23099 0 9.43099V52.4817C0 58.8563 3.29582 62 9.88746 62H12.4707C18.9732 62 22.2691 58.8563 22.2691 52.4817V39.1211H19.9531ZM31.6784 0.436619V61.5634H48.3357V59.4676H33.9944V0.436619H31.6784ZM55.4263 61.5634V0.436619H72.7962V2.53239H57.7423V29.4282H72.3508V31.5239H57.7423V59.4676H72.9744V61.5634H55.4263ZM102.974 22.093V9.95493C102.974 3.58028 99.6778 0.436619 93.1752 0.436619H82.2188V61.5634H84.5348V32.9211C84.6073 32.9206 84.6794 32.9202 84.7513 32.9197L92.5106 46.0464L100.538 61.179H103.197L87.204 32.9086C88.7195 32.9043 90.2316 32.9043 92.0172 32.9043C97.7395 32.9043 102.974 30.0625 102.974 22.093ZM100.658 22.3549C100.658 28.031 97.8072 30.8253 92.0172 30.8253H84.5348V2.53239H93.0861C98.1635 2.53239 100.658 4.97747 100.658 9.86761V22.3549ZM118.165 30.5634L134.644 61.5634H132.15L124.044 46.2817L115.938 31V61.5634H113.622V31V0.436619H115.938V30.4761L132.595 0.436619H135L118.165 30.5634Z", :fill "currentColor"}]])
 
 (def github-icon
@@ -24,7 +24,7 @@
    [:path {:fill-rule "evenodd", :clip-rule "evenodd", :d "M12 0.375C12.21 0.374864 12.4159 0.433521 12.5943 0.54433C12.7727 0.65514 12.9165 0.813678 13.0095 1.002L15.8325 6.7245L22.1475 7.6425C22.3552 7.67266 22.5503 7.76033 22.7108 7.89558C22.8713 8.03082 22.9907 8.20827 23.0556 8.40785C23.1206 8.60743 23.1284 8.8212 23.0781 9.02498C23.0279 9.22876 22.9217 9.41443 22.7715 9.561L18.2025 14.016L19.281 20.304C19.3166 20.5109 19.2935 20.7236 19.2145 20.9181C19.1355 21.1126 19.0036 21.2811 18.8338 21.4045C18.664 21.528 18.4631 21.6015 18.2537 21.6166C18.0443 21.6318 17.8348 21.5881 17.649 21.4905L12 18.5205L6.351 21.4905C6.16528 21.588 5.956 21.6317 5.74679 21.6165C5.53757 21.6014 5.33676 21.528 5.16703 21.4048C4.99729 21.2815 4.86539 21.1133 4.78622 20.919C4.70706 20.7248 4.68377 20.5123 4.719 20.3055L5.799 14.0145L1.227 9.561C1.07635 9.41448 0.969751 9.2287 0.91928 9.0247C0.868809 8.82071 0.876485 8.60665 0.941439 8.40679C1.00639 8.20693 1.12603 8.02926 1.28679 7.89392C1.44754 7.75857 1.643 7.67095 1.851 7.641L8.166 6.7245L10.9905 1.002C11.0835 0.813678 11.2273 0.65514 11.4057 0.54433C11.5841 0.433521 11.79 0.374864 12 0.375V0.375ZM12 4.0425L9.9225 8.25C9.84183 8.41335 9.72268 8.55467 9.57532 8.66179C9.42795 8.76892 9.25678 8.83865 9.0765 8.865L4.431 9.54L7.791 12.816C7.92173 12.9433 8.01954 13.1005 8.07598 13.274C8.13243 13.4475 8.14582 13.6322 8.115 13.812L7.323 18.438L11.4765 16.254C11.6379 16.1691 11.8176 16.1248 12 16.1248C12.1824 16.1248 12.3621 16.1691 12.5235 16.254L16.6785 18.438L15.8835 13.812C15.8527 13.6322 15.8661 13.4475 15.9225 13.274C15.979 13.1005 16.0768 12.9433 16.2075 12.816L19.5675 9.5415L14.9235 8.8665C14.7432 8.84015 14.5721 8.77042 14.4247 8.66329C14.2773 8.55617 14.1582 8.41485 14.0775 8.2515L12 4.041V4.0425Z", :fill "currentColor"}]])
 
 (def stars-badge
-  [:div.py-1.px-2.rounded-full.text-greenish.text-center.ml-2.flex.items-center.bg-greenish-30.stars-badge
+  [:div.py-1.px-2.rounded-full.text-greenish.justify-center.ml-2.flex.items-center.bg-greenish-30.stars-badge
    {:class "h-[22px] min-w-[48px]"}])
 
 (def emacs-icon
@@ -138,8 +138,9 @@
 ^{::clerk/width :full}
 (clerk/html
  [:div.px-8.lg:px-0.lg:container.md:mx-auto.not-prose
-  [:nav.separator-bottom.pt-12.pb-4.text-sm.flex.justify-between.page-scroll-links
-   [:ul.flex
+  [:nav.separator-bottom.pt-12.pb-4.text-sm.flex..justify-end.md:justify-between.page-scroll-links.relative
+   [:ul.flex.absolute.md:relative.left-0
+    {:class "-bottom-[30px] md:bottom-0"}
     [:li.mr-4 [:a {:href "#features"} "Features"]]
     [:li.mr-4 [:a {:href "#use-cases"} "Use Cases"]]
     [:li.mr-4 [:a {:href "#quotes"} "Quotes"]]
@@ -211,7 +212,7 @@
     [:a.text-greenish-60.font-inter.font-normal.ml-3 {:href "https://github.com/nextjournal/clerk-demo"} "See Clerk Demos Repository"]]
    [:p.text-xl.font-iosevka.text-greenish.mt-10.max-w-xl
     "Clerk is compatible with any Clojure and JVM library enabling these amazing use cases by composing libraries from Clojure's eco-system."]
-   [:div.mt-10.grid.grid-cols-2.md:grid-cols-3.gap-4.md:gap-6.text-sm
+   [:div.mt-10.grid.grid-cols-1.md:grid-cols-3.gap-10.md:gap-6.text-sm
     [:a.group {:href "https://snapshots.nextjournal.com/clerk-demo/build/f8112d44fa742cd0913dcbd370919eca249cbcd9/notebooks/data_science.html"}
      [:img {:src "https://cdn.nextjournal.com/data/QmWcxhxG6b2aMJSvkjkmBnRU2rNKCAhRB5rzMt8vvMwaHJ?filename=data-science.png&content-type=image/png"}]
      [:div.font-inter.text-greenish-60.mt-2.group-hover:text-white.transition-all
