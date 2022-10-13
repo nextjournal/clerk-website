@@ -65,7 +65,7 @@
                                                 (.setAttribute "async" true)
                                                 (.setAttribute "charset" "utf-8")
                                                 (.setAttribute "id" "twitter-js"))
-                                   scroll-el (js/document.querySelector ".scroll-container")
+                                   scroll-el (js/document.querySelector "html")
                                    !scroll-anim (atom nil)
                                    scroll-to-anchor! (fn [anchor]
                                                        (let [scroll-top (.-scrollTop scroll-el)
@@ -108,7 +108,9 @@
      --greenish-50: rgba(146, 189, 154, 0.5);
      --greenish-30: rgba(146, 189, 154, 0.3)
    }
+   html { overflow-y: auto !important; }
    body { background: #000 !important; font-family: 'Inter', sans-serif; color: var(--greenish); }
+   .scroll-container { height: auto !important; }
    #clerk-static-app > div { background: #000 !important; }
    #clerk-static-app .viewer-notebook > :first-child { display: none; }
    .dark-mode-toggle { display: none; }
