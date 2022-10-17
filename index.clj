@@ -236,7 +236,7 @@
     [:h2.section-heading.pt-4.text-sm
      [:span.font-iosevka.font-medium.uppercase.text-greenish "Quotes"]
      [:a.text-greenish-60.font-inter.font-normal.ml-3 {:href "https://twitter.com/search?q=clerk%20clojure&src=spelling_expansion_revert_click&f=live"} "See more on Twitter"]]
-    [:div.grid.md:grid-cols-2.xl:grid-cols-4.gap-6.mt-10
+    [:div.grid.md:grid-cols-2.gap-6.mt-10
      [:div.twitter-card
       [:blockquote {:class "twitter-tweet", :data-theme "dark"}
        [:p {:lang "en", :dir "ltr"} "Huge shoutout to " 
