@@ -139,8 +139,9 @@
 
 ^{::clerk/width :full}
 (clerk/html
- [:div.px-8.lg:px-0.lg:container.md:mx-auto.not-prose
-  [:nav.separator-bottom.pt-12.pb-4.text-sm.flex..justify-end.md:justify-between.page-scroll-links.relative
+ [:div.px-8.lg:px-0.md:mx-auto.not-prose
+  {:class "lg:max-w-[1024px]"}
+  [:nav.separator-bottom.pt-12.pb-4.text-sm.flex.justify-end.md:justify-between.page-scroll-links.relative
    [:ul.flex.absolute.md:relative.left-0
     {:class "-bottom-[30px] md:bottom-0"}
     [:li.mr-4 [:a {:href "#features"} "Features"]]
