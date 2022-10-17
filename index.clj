@@ -66,20 +66,17 @@
                                                 (.setAttribute "charset" "utf-8")
                                                 (.setAttribute "id" "twitter-js"))
                                    scroll-el (js/document.querySelector "html")
-                                   !scroll-anim (atom nil)
                                    scroll-to-anchor! (fn [anchor]
                                                        (let [scroll-top (.-scrollTop scroll-el)
                                                              offset 40]
-                                                         (swap! !scroll-anim
-                                                                nil
-                                                                (framer-motion/animate
-                                                                 scroll-top
-                                                                 (+ scroll-top(.. (js/document.getElementById (subs anchor 1)) getBoundingClientRect -top))
-                                                                 (j/lit {:onUpdate #(j/assoc! scroll-el :scrollTop (- % offset))
-                                                                         :onComplete #(.pushState js/history (j/lit {}) "" anchor)
-                                                                         :type :spring
-                                                                         :duration 0.4
-                                                                         :bounce 0.15})))))]
+                                                         (framer-motion/animate
+                                                          scroll-top
+                                                          (+ scroll-top (.. (js/document.getElementById (subs anchor 1)) getBoundingClientRect -top))
+                                                          (j/lit {:onUpdate #(j/assoc! scroll-el :scrollTop (- % offset))
+                                                                  :onComplete #(.pushState js/history (j/lit {}) "" anchor)
+                                                                  :type :spring
+                                                                  :duration 0.4
+                                                                  :bounce 0.15}))))]
                                (.. js/document (querySelector "head") (appendChild twitter-js))
                                (.. js/document (addEventListener "click" (fn [e]
                                                                            (when (.. e -target (matches ".page-scroll-links a"))
@@ -111,7 +108,7 @@
    html { overflow-y: auto !important; }
    body { background: #000 !important; font-family: 'Inter', sans-serif; color: var(--greenish); }
    .scroll-container { height: auto !important; }
-   #clerk-static-app > div { background: #000 !important; }
+   #clerk-static-app > div { background: #000 !important; height: auto !important; }
    #clerk-static-app .viewer-notebook > :first-child { display: none; }
    .dark-mode-toggle { display: none; }
    a { color: var(--greenish); transition: all 0.125s ease;}
