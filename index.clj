@@ -158,7 +158,7 @@
      [:a.link-hairline {:href "https://moldabledevelopment.com" :target "_blank"} "Moldable"]" Live Programming for Clojure"]
     [:p.text-xl.md:text-3xl.font-light.mt-6
      "Clerk takes a Clojure namespace and turns it into a notebook. Learn more in the "
-     [:a.link-hairline {:href "https://github.clerk.garden/nextjournal/book-of-clerk/"} "Book of Clerk."]]]
+     [:a.link-hairline {:href "https://book.clerk.vision/"} "Book of Clerk."]]]
    [:figure.flex-auto.ml-10.text-center.hidden.lg:flex.flex-col.justify-center
     clerk-logo
     [:figcaption.text-greenish-60.mt-4.text-xs.font-inter
@@ -168,7 +168,7 @@
   [:div#features.mt-10
    [:h2.section-heading.pt-4.text-sm
     [:span.font-iosevka.font-medium.uppercase.text-greenish "Features"]
-    [:a.text-greenish-60.font-inter.font-normal.ml-3 {:href "https://github.clerk.garden/nextjournal/book-of-clerk/"} "Learn more in the Book of Clerk"]]
+    [:a.text-greenish-60.font-inter.font-normal.ml-3 {:href "https://book.clerk.vision/"} "Learn more in the Book of Clerk"]]
    [:ul.font-medium.text-greenish.mt-10.md:grid.grid-cols-3.gap-6
     [:li
      [:div.flex.itesm-center.mb-4.text-greenish-60
@@ -283,4 +283,4 @@
       [:iframe {:width "100%", :height "315", :src "https://www.youtube.com/embed/kp-4WuyDGww", :title "YouTube video player", :frameborder "0", :allow "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture", :allowfullscreen true}]]]]
    [:footer.text-sm.my-20.text-greenish-60.separator-top.pt-4
     [:ul.flex
-     [:li.mr-4 "This website is built with Clerk. " [:a.link-hairline {:href "#"} "See notebook."]]]]]])
+     [:li.mr-4 "This website is built with Clerk. " [:a.link-hairline {:href "https://github.com/nextjournal/clerk-website/blob/main/index.clj"} "See notebook."]]]]]])
