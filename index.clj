@@ -154,9 +154,9 @@
     [:h1.flex
      clerk-type
      [:div.flex.ml-2.lg:hidden {:class "h-[62px]"} clerk-logo]]
-    [:h2.text-xl.md:text-3xl.font-medium.mt-8.font-iosevka
+    [:h2.text-xl.md:text-2xl.font-medium.mt-8.font-iosevka
      [:a.link-hairline {:href "https://moldabledevelopment.com" :target "_blank"} "Moldable"]" Live Programming for Clojure"]
-    [:p.text-xl.md:text-3xl.font-light.mt-6
+    [:p.text-xl.md:text-2xl.font-light.mt-6
      "Clerk takes a Clojure namespace and turns it into a notebook. Learn more in the "
      [:a.link-hairline {:href "https://book.clerk.vision/"} "Book of Clerk."]]]
    [:figure.flex-auto.ml-10.text-center.hidden.lg:flex.flex-col.justify-center
