@@ -164,7 +164,7 @@
     [:figcaption.text-greenish-60.mt-4.text-xs.font-inter
      "Clerk logo by Jack Rusher."
      [:br]
-     [:a.link-hairline.text-greenish-60 {:href "#"} "See notebook here."]]]]
+     [:a.link-hairline.text-greenish-60 {:href "https://github.clerk.garden/nextjournal/clerk-demo/commit/cb212b2edc64e762bcd1af56417ef9f6b2fde5b1/notebooks/logo.html"} "See notebook here."]]]]
   [:div#features.mt-10
    [:h2.section-heading.pt-4.text-sm
     [:span.font-iosevka.font-medium.uppercase.text-greenish "Features"]
