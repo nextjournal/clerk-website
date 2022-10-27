@@ -1,6 +1,11 @@
 ^{:nextjournal.clerk/visibility {:code :hide}}
 (ns nextjournal.clerk.homepage
-  {:nextjournal.clerk/visibility {:code :hide :result :hide}}
+  {:nextjournal.clerk/visibility {:code :hide :result :hide}
+   :nextjournal.clerk/open-graph
+   {:url "https://clerk.vision"
+    :title "Clerk: Moldable Live Programming for Clojure"
+    :description "Clerk takes a Clojure namespace and turns it into a notebook."
+    :image "https://cdn.nextjournal.com/data/QmX6rTcD59yVWjLkTdAwAJbzyDDqLZNHrdWtLxF7XQVvbW?filename=clerk-og-image.png&content-type=image/png"}}
   (:require [clojure.string :as str]
             [nextjournal.clerk :as clerk])
   (:import (javax.imageio ImageIO)
