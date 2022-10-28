@@ -1,5 +1,6 @@
 {:deps {io.github.nextjournal/clerk {:git/sha "4c17b0f36e39b41c9c99dd0f2837aa8696e7abb1"}}
  :aliases {:dev {:extra-paths ["dev"]}
-           :nextjournal/clerk {:exec-fn nextjournal.clerk/build-static-app!
+           :nextjournal/clerk {:exec-fn build/build!
+                               :extra-paths ["build"]
                                :exec-args {:paths ["index.clj"]
                                            :compile-css true}}}}
