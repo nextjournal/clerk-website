@@ -2,4 +2,5 @@
  :aliases {:dev {:extra-paths ["dev"]}
            :nextjournal/clerk {:exec-fn nextjournal.clerk/build!
                                :exec-args {:index "index.clj"
-                                           :compile-css true}}}}
+                                           :compile-css true
+                                           :ssr true}}}}
