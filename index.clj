@@ -1,4 +1,3 @@
-^{:nextjournal.clerk/visibility {:code :hide}}
 (ns nextjournal.clerk.homepage
   {:nextjournal.clerk/visibility {:code :hide :result :hide}
    :nextjournal.clerk/open-graph
@@ -99,7 +98,8 @@
 
 {::clerk/visibility {:result :show}}
 
-(clerk/with-viewer js-behaviors nil)
+(clerk/with-viewer js-behaviors
+  {})
 
 (clerk/html
  [:<>
