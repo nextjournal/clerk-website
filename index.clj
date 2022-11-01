@@ -103,37 +103,39 @@
 
 (clerk/html
  [:<>
-  [:style {:type "text/css"}
-   ":root {
-     --greenish: rgba(146, 189, 154, 1);
-     --greenish-60: rgba(146, 189, 154, 0.6);
-     --greenish-50: rgba(146, 189, 154, 0.5);
-     --greenish-30: rgba(146, 189, 154, 0.3)
-   }
-   html { overflow-y: auto !important; }
-   body { background: #000 !important; font-family: 'Inter', sans-serif; color: var(--greenish); }
-   .scroll-container { height: auto !important; }
-   #clerk-static-app > div { background: #000 !important; height: auto !important; }
-   #clerk-static-app .viewer-notebook > :first-child { display: none; }
-   .dark-mode-toggle { display: none; }
-   a { color: var(--greenish); transition: all 0.125s ease;}
-   a:hover { color: white; }
-   .viewer-notebook { padding: 0; }
-   .viewer-result { margin: 0; }
-   .viewer-result + .viewer-result { margin: 0; }
-   .font-iosevka { font-family: 'Iosevka Web', monospace; }
-   .font-inter { font-family: 'Inter', sans-serif; }
-   .text-greenish { color: var(--greenish); }
-   .text-greenish-60 { color: var(--greenish-60); }
-   .bg-greenish { background-color: var(--greenish); }
-   .bg-greenish-30 { background-color: var(--greenish-30); }
-   .border-greenish-50 { border: 4px solid var(--greenish-30); }
-   .separator-top { border-top: 4px solid var(--greenish-50); }
-   .separator-bottom { border-bottom: 4px solid var(--greenish-50); }
-   .section-heading { border-top: 4px solid var(--greenish-50); }
-   .link-hairline { border-bottom: 1px solid var(--greenish-60); }
-   .link-hairline:hover { border-color: white; }
-   .twitter-card iframe { border: 3px solid var(--greenish-30); border-radius: 15px; overflow: hidden; margin-top: -10px;"]
+  [:style {:type "text/css"
+           ;; FIXME: this makes escaping in SSR happy
+           :dangerouslySetInnerHTML {:__html
+                                     ":root {
+  --greenish: rgba(146, 189, 154, 1);
+  --greenish-60: rgba(146, 189, 154, 0.6);
+  --greenish-50: rgba(146, 189, 154, 0.5);
+  --greenish-30: rgba(146, 189, 154, 0.3)
+}
+html { overflow-y: auto !important; }
+body { background: #000 !important; font-family: 'Inter', sans-serif; color: var(--greenish); }
+.scroll-container { height: auto !important; }
+#clerk-static-app > div { background: #000 !important; height: auto !important; }
+#clerk-static-app .viewer-notebook > :first-child { display: none; }
+.dark-mode-toggle { display: none; }
+a { color: var(--greenish); transition: all 0.125s ease;}
+a:hover { color: white; }
+.viewer-notebook { padding: 0; }
+.viewer-result { margin: 0; }
+.viewer-result + .viewer-result { margin: 0; }
+.font-iosevka { font-family: 'Iosevka Web', monospace; }
+.font-inter { font-family: 'Inter', sans-serif; }
+.text-greenish { color: var(--greenish); }
+.text-greenish-60 { color: var(--greenish-60); }
+.bg-greenish { background-color: var(--greenish); }
+.bg-greenish-30 { background-color: var(--greenish-30); }
+.border-greenish-50 { border: 4px solid var(--greenish-30); }
+.separator-top { border-top: 4px solid var(--greenish-50); }
+.separator-bottom { border-bottom: 4px solid var(--greenish-50); }
+.section-heading { border-top: 4px solid var(--greenish-50); }
+.link-hairline { border-bottom: 1px solid var(--greenish-60); }
+.link-hairline:hover { border-color: white; }
+.twitter-card iframe { border: 3px solid var(--greenish-30); border-radius: 15px; overflow: hidden; margin-top: -10px;"}}]
   [:link {:rel "preconnect" :href "https://fonts.bunny.net"}]
   [:link {:rel "stylesheet" :href "https://fonts.bunny.net/css?family=inter:400,600"}]
   [:link {:rel "preconnect" :href "https://ntk148v.github.io"}]
