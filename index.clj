@@ -150,8 +150,9 @@ a:hover { color: white; }
     {:class "-bottom-[30px] md:bottom-0"}
     [:li.mr-4 [:a {:href "#features"} "Features"]]
     [:li.mr-4 [:a {:href "#use-cases"} "Use Cases"]]
-    [:li.mr-4 [:a {:href "#quotes"} "Quotes"]]
-    [:li [:a {:href "#talks"} "Talks"]]]
+    [:li.mr-4.hidden.md:block [:a {:href "#quotes"} "Quotes"]]
+    [:li.mr-4 [:a {:href "#talks"} "Talks"]]
+    [:li [:a {:href "https://book.clerk.vision"} "Book"]]]
    [:ul.flex
     [:li.mr-4
      [:a.flex.items-center {:href "http://github.com/nextjournal/clerk"} github-icon [:span.ml-2.hidden.md:inline "GitHub"]]]
