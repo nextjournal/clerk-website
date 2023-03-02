@@ -60,41 +60,40 @@
 (def js-behaviors
   {:transform-fn clerk/mark-presented
    :render-fn '(fn []
-                 (v/html
-                  [:div
-                   {:ref (fn [el]
-                           (when (and el (not (js/document.getElementById "twitter-js")))
-                             (let [twitter-js (doto (js/document.createElement "script")
-                                                (.setAttribute "src" "https://platform.twitter.com/widgets.js")
-                                                (.setAttribute "async" true)
-                                                (.setAttribute "charset" "utf-8")
-                                                (.setAttribute "id" "twitter-js"))
-                                   scroll-el (js/document.querySelector "html")
-                                   scroll-to-anchor! (fn [anchor]
-                                                       (let [scroll-top (.-scrollTop scroll-el)
-                                                             offset 40]
-                                                         (framer-motion/animate
-                                                          scroll-top
-                                                          (+ scroll-top (.. (js/document.getElementById (subs anchor 1)) getBoundingClientRect -top))
-                                                          (j/lit {:onUpdate #(j/assoc! scroll-el :scrollTop (- % offset))
-                                                                  :onComplete #(.pushState js/history (j/lit {}) "" anchor)
-                                                                  :type :spring
-                                                                  :duration 0.4
-                                                                  :bounce 0.15}))))]
-                               (.. js/document (querySelector "head") (appendChild twitter-js))
-                               (.. js/document (addEventListener "click" (fn [e]
-                                                                           (when (.. e -target (matches ".page-scroll-links a"))
-                                                                             (.preventDefault e)
-                                                                             (scroll-to-anchor! (.. e -target (getAttribute "href")))))))
-                               (-> (js/fetch "https://api.github.com/repos/nextjournal/clerk")
-                                   (.then (fn [res] (.json res)))
-                                   (.then (fn [data]
-                                            (if-let [stars (.-stargazers_count data)]
-                                              (j/assoc! (js/document.querySelector ".stars-badge") :innerHTML stars)
-                                              (throw (js/Error. "stargazers_count missing in response data")))))
-                                   (.catch (fn [e]
-                                             (js/console.error e)
-                                             (.. (js/document.querySelector ".stars-badge") -classList (add "hidden"))))))))}]))})
+                 [:div
+                  {:ref (fn [el]
+                          (when (and el (not (js/document.getElementById "twitter-js")))
+                            (let [twitter-js (doto (js/document.createElement "script")
+                                               (.setAttribute "src" "https://platform.twitter.com/widgets.js")
+                                               (.setAttribute "async" true)
+                                               (.setAttribute "charset" "utf-8")
+                                               (.setAttribute "id" "twitter-js"))
+                                  scroll-el (js/document.querySelector "html")
+                                  scroll-to-anchor! (fn [anchor]
+                                                      (let [scroll-top (.-scrollTop scroll-el)
+                                                            offset 40]
+                                                        (framer-motion/animate
+                                                         scroll-top
+                                                         (+ scroll-top (.. (js/document.getElementById (subs anchor 1)) getBoundingClientRect -top))
+                                                         (applied-science.js-interop/lit {:onUpdate #(applied-science.js-interop/assoc! scroll-el :scrollTop (- % offset))
+                                                                                          :onComplete #(.pushState js/history (applied-science.js-interop/lit {}) "" anchor)
+                                                                                          :type :spring
+                                                                                          :duration 0.4
+                                                                                          :bounce 0.15}))))]
+                              (.. js/document (querySelector "head") (appendChild twitter-js))
+                              (.. js/document (addEventListener "click" (fn [e]
+                                                                          (when (.. e -target (matches ".page-scroll-links a"))
+                                                                            (.preventDefault e)
+                                                                            (scroll-to-anchor! (.. e -target (getAttribute "href")))))))
+                              (-> (js/fetch "https://api.github.com/repos/nextjournal/clerk")
+                                  (.then (fn [res] (.json res)))
+                                  (.then (fn [data]
+                                           (if-let [stars (.-stargazers_count data)]
+                                             (applied-science.js-interop/assoc! (js/document.querySelector ".stars-badge") :innerHTML stars)
+                                             (throw (js/Error. "stargazers_count missing in response data")))))
+                                  (.catch (fn [e]
+                                            (js/console.error e)
+                                            (.. (js/document.querySelector ".stars-badge") -classList (add "hidden"))))))))}])})
 
 {::clerk/visibility {:result :show}}
 
