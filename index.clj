@@ -6,9 +6,20 @@
     :description "Clerk takes a Clojure namespace and turns it into a notebook."
     :image "https://cdn.nextjournal.com/data/QmX6rTcD59yVWjLkTdAwAJbzyDDqLZNHrdWtLxF7XQVvbW?filename=clerk-og-image.png&content-type=image/png"}}
   (:require [clojure.string :as str]
-            [nextjournal.clerk :as clerk])
+            [nextjournal.clerk :as clerk]
+            [nextjournal.clerk.view :as clerk.view])
   (:import (javax.imageio ImageIO)
            (java.net URL)))
+
+(alter-var-root #'clerk.view/include-css+js
+                (fn [include-css+js-orig extra-includes]
+                  (fn [state]
+                    (concat (include-css+js-orig state)
+                            extra-includes)))
+                (list [:link {:rel "preconnect" :href "https://fonts.bunny.net"}]
+                      [:link {:rel "stylesheet" :href "https://fonts.bunny.net/css?family=inter:400,600"}]
+                      [:link {:rel "preconnect" :href "https://ntk148v.github.io"}]
+                      [:link {:rel "stylesheet" :href "https://ntk148v.github.io/iosevkawebfont/latest/iosevka.css"}]))
 
 (def clerk-type
   [:svg.flex-shrink-0 {:width "135", :height "62", :viewbox "0 0 135 62", :fill "none", :xmlns "http://www.w3.org/2000/svg" :alt "Clerk"}
@@ -135,10 +146,7 @@ a:hover { color: white; }
 .link-hairline { border-bottom: 1px solid var(--greenish-60); }
 .link-hairline:hover { border-color: white; }
 .twitter-card iframe { border: 3px solid var(--greenish-30); border-radius: 15px; overflow: hidden; margin-top: -10px;"}}]
-  [:link {:rel "preconnect" :href "https://fonts.bunny.net"}]
-  [:link {:rel "stylesheet" :href "https://fonts.bunny.net/css?family=inter:400,600"}]
-  [:link {:rel "preconnect" :href "https://ntk148v.github.io"}]
-  [:link {:rel "stylesheet" :href "https://ntk148v.github.io/iosevkawebfont/latest/iosevka.css"}]])
+  ])
 
 ^{::clerk/width :full}
 (clerk/html
