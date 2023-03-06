@@ -219,7 +219,9 @@ a:hover { color: white; }
       {:class "h-[43px]"} publish-icon]
      [:span.text-xl.font-iosevka "Static Publishing"]
      [:p.mt-2.text-sm.text-greenish-60
-      "Produce static HTML pages and serve them from your local file system or any static webserver. If you like it batteries-included, take a look at clerk.garden, Clerk's upcoming GitHub-based publishing platform."]]]]
+      "Produce static HTML pages and serve them from your local file system or any static webserver. If you like it batteries-included, take a look at "
+      [:a {:href "https://clerk.garden"} "clerk.garden"]
+      ", Clerk's simple GitHub-based publishing platform."]]]]
   [:div#use-cases.mt-20
    [:h2.section-heading.pt-4.text-sm
     [:span.font-iosevka.font-medium.uppercase.text-greenish "Use Cases"]
