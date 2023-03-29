@@ -93,7 +93,7 @@
                                                                                           :bounce 0.15}))))]
                               (.. js/document (querySelector "head") (appendChild twitter-js))
                               (.. js/document (addEventListener "click" (fn [e]
-                                                                          (when (.. e -target (matches ".page-scroll-links a"))
+                                                                          (when (.. e -target (matches "a.page-scroll-link"))
                                                                             (.preventDefault e)
                                                                             (scroll-to-anchor! (.. e -target (getAttribute "href")))))))
                               (-> (js/fetch "https://api.github.com/repos/nextjournal/clerk")
@@ -151,13 +151,13 @@ a:hover { color: white; }
 (clerk/html
  [:div.px-8.lg:px-0.md:mx-auto.not-prose
   {:class "lg:max-w-[1024px]"}
-  [:nav.separator-bottom.pt-12.pb-4.text-sm.flex.justify-end.md:justify-between.page-scroll-links.relative
+  [:nav.separator-bottom.pt-12.pb-4.text-sm.flex.justify-end.md:justify-between.relative
    [:ul.flex.absolute.md:relative.left-0
     {:class "-bottom-[30px] md:bottom-0"}
-    [:li.mr-4 [:a {:href "#features"} "Features"]]
-    [:li.mr-4 [:a {:href "#use-cases"} "Use Cases"]]
-    [:li.mr-4.hidden.md:block [:a {:href "#quotes"} "Quotes"]]
-    [:li.mr-4 [:a {:href "#talks"} "Talks"]]
+    [:li.mr-4 [:a.page-scroll-link {:href "#features"} "Features"]]
+    [:li.mr-4 [:a.page-scroll-link {:href "#use-cases"} "Use Cases"]]
+    [:li.mr-4.hidden.md:block [:a.page-scroll-link {:href "#quotes"} "Quotes"]]
+    [:li.mr-4 [:a.page-scroll-link {:href "#talks"} "Talks"]]
     [:li [:a {:href "https://book.clerk.vision"} "Book"]]]
    [:ul.flex
     [:li.mr-4
