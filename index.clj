@@ -22,20 +22,21 @@
                       [:link {:rel "stylesheet" :href "https://ntk148v.github.io/iosevkawebfont/latest/iosevka.css"}]))
 
 (def clerk-type
-  [:svg.flex-shrink-0 {:width "135", :height "62", :viewbox "0 0 135 62", :fill "none", :xmlns "http://www.w3.org/2000/svg" :alt "Clerk"}
+  [:svg.flex-shrink-0 {:width "135", :height "62", :viewbox "0 0 135 62", :fill "none", :xmlns "http://www.w3.org/2000/svg" :alt "Clerk" :aria-label "Clerk"}
    [:path {:fill-rule "evenodd", :clip-rule "evenodd", :d "M19.9531 39.1211V52.569C19.9531 57.4591 17.4589 59.9042 12.4707 59.9042H9.88746C4.81011 59.9042 2.31598 57.4591 2.31598 52.569V9.43099C2.31598 4.54084 4.81011 2.09577 9.88746 2.09577H12.3816C17.3699 2.09577 19.864 4.54084 19.864 9.43099V21.0451H22.18V9.43099C22.18 3.23099 18.8842 0 12.3816 0H9.88746C3.38489 0 0 3.23099 0 9.43099V52.4817C0 58.8563 3.29582 62 9.88746 62H12.4707C18.9732 62 22.2691 58.8563 22.2691 52.4817V39.1211H19.9531ZM31.6784 0.436619V61.5634H48.3357V59.4676H33.9944V0.436619H31.6784ZM55.4263 61.5634V0.436619H72.7962V2.53239H57.7423V29.4282H72.3508V31.5239H57.7423V59.4676H72.9744V61.5634H55.4263ZM102.974 22.093V9.95493C102.974 3.58028 99.6778 0.436619 93.1752 0.436619H82.2188V61.5634H84.5348V32.9211C84.6073 32.9206 84.6794 32.9202 84.7513 32.9197L92.5106 46.0464L100.538 61.179H103.197L87.204 32.9086C88.7195 32.9043 90.2316 32.9043 92.0172 32.9043C97.7395 32.9043 102.974 30.0625 102.974 22.093ZM100.658 22.3549C100.658 28.031 97.8072 30.8253 92.0172 30.8253H84.5348V2.53239H93.0861C98.1635 2.53239 100.658 4.97747 100.658 9.86761V22.3549ZM118.165 30.5634L134.644 61.5634H132.15L124.044 46.2817L115.938 31V61.5634H113.622V31V0.436619H115.938V30.4761L132.595 0.436619H135L118.165 30.5634Z", :fill "currentColor"}]])
 
 (def github-icon
-  [:svg {:width "24", :height "24", :viewbox "0 0 24 24", :fill "none", :xmlns "http://www.w3.org/2000/svg"}
+  [:svg {:width "24", :height "24", :viewbox "0 0 24 24", :fill "none", :xmlns "http://www.w3.org/2000/svg" :aria-hidden "true"}
    [:path {:fill-rule "evenodd", :clip-rule "evenodd", :d "M11.9989 0C5.37254 0 0 5.5085 0 12.3041C0 17.7401 3.43804 22.3512 8.20651 23.979C8.8069 24.0915 9.02569 23.7116 9.02569 23.3853C9.02569 23.0937 9.01538 22.3195 9.00948 21.2931C5.67163 22.0363 4.96737 19.6434 4.96737 19.6434C4.4215 18.2219 3.63473 17.8435 3.63473 17.8435C2.5452 17.0807 3.71724 17.0958 3.71724 17.0958C4.9217 17.1826 5.55523 18.3639 5.55523 18.3639C6.62562 20.2439 8.36416 19.7009 9.04779 19.3859C9.15682 18.5913 9.46622 18.049 9.80951 17.7416C7.14497 17.4311 4.34341 16.3752 4.34341 11.6605C4.34341 10.3176 4.8112 9.21936 5.57881 8.35906C5.45505 8.04787 5.04325 6.79707 5.69594 5.1029C5.69594 5.1029 6.7037 4.77207 8.99622 6.36427C9.95316 6.09085 10.9801 5.9549 12.0004 5.95036C13.0192 5.9549 14.0461 6.09085 15.0045 6.36427C17.2956 4.77207 18.3011 5.1029 18.3011 5.1029C18.956 6.79707 18.5442 8.04787 18.4205 8.35906C19.1895 9.21936 19.6544 10.3176 19.6544 11.6605C19.6544 16.3873 16.8484 17.4274 14.175 17.7317C14.606 18.1117 14.9898 18.8625 14.9898 20.0105C14.9898 21.6549 14.975 22.9819 14.975 23.3853C14.975 23.7146 15.1909 24.0975 15.8001 23.9774C20.5649 22.3467 24 17.7385 24 12.3041C24 5.5085 18.6267 0 11.9989 0Z", :fill "currentColor"}]])
 
 (def clerk-logo
   [:img.object-scale-down
    {:src "https://cdn.nextjournal.com/data/QmSucfUyXCMKg1QbgR3QmLEWiRJ9RJvPum5GqjLPsAyngx?filename=clerk-eye.png&content-type=image/png"
-    :class "max-h-[290px]"}])
+    :class "max-h-[290px]"
+    :aria-hidden "true"}])
 
 (def star-icon
-  [:svg {:width "24", :height "24", :viewbox "0 0 24 24", :fill "none", :xmlns "http://www.w3.org/2000/svg"}
+  [:svg {:width "24", :height "24", :viewbox "0 0 24 24", :fill "none", :xmlns "http://www.w3.org/2000/svg" :aria-hidden "true"}
    [:path {:fill-rule "evenodd", :clip-rule "evenodd", :d "M12 0.375C12.21 0.374864 12.4159 0.433521 12.5943 0.54433C12.7727 0.65514 12.9165 0.813678 13.0095 1.002L15.8325 6.7245L22.1475 7.6425C22.3552 7.67266 22.5503 7.76033 22.7108 7.89558C22.8713 8.03082 22.9907 8.20827 23.0556 8.40785C23.1206 8.60743 23.1284 8.8212 23.0781 9.02498C23.0279 9.22876 22.9217 9.41443 22.7715 9.561L18.2025 14.016L19.281 20.304C19.3166 20.5109 19.2935 20.7236 19.2145 20.9181C19.1355 21.1126 19.0036 21.2811 18.8338 21.4045C18.664 21.528 18.4631 21.6015 18.2537 21.6166C18.0443 21.6318 17.8348 21.5881 17.649 21.4905L12 18.5205L6.351 21.4905C6.16528 21.588 5.956 21.6317 5.74679 21.6165C5.53757 21.6014 5.33676 21.528 5.16703 21.4048C4.99729 21.2815 4.86539 21.1133 4.78622 20.919C4.70706 20.7248 4.68377 20.5123 4.719 20.3055L5.799 14.0145L1.227 9.561C1.07635 9.41448 0.969751 9.2287 0.91928 9.0247C0.868809 8.82071 0.876485 8.60665 0.941439 8.40679C1.00639 8.20693 1.12603 8.02926 1.28679 7.89392C1.44754 7.75857 1.643 7.67095 1.851 7.641L8.166 6.7245L10.9905 1.002C11.0835 0.813678 11.2273 0.65514 11.4057 0.54433C11.5841 0.433521 11.79 0.374864 12 0.375V0.375ZM12 4.0425L9.9225 8.25C9.84183 8.41335 9.72268 8.55467 9.57532 8.66179C9.42795 8.76892 9.25678 8.83865 9.0765 8.865L4.431 9.54L7.791 12.816C7.92173 12.9433 8.01954 13.1005 8.07598 13.274C8.13243 13.4475 8.14582 13.6322 8.115 13.812L7.323 18.438L11.4765 16.254C11.6379 16.1691 11.8176 16.1248 12 16.1248C12.1824 16.1248 12.3621 16.1691 12.5235 16.254L16.6785 18.438L15.8835 13.812C15.8527 13.6322 15.8661 13.4475 15.9225 13.274C15.979 13.1005 16.0768 12.9433 16.2075 12.816L19.5675 9.5415L14.9235 8.8665C14.7432 8.84015 14.5721 8.77042 14.4247 8.66329C14.2773 8.55617 14.1582 8.41485 14.0775 8.2515L12 4.041V4.0425Z", :fill "currentColor"}]])
 
 (def stars-badge
@@ -182,41 +183,41 @@ a:hover { color: white; }
   [:div#features.mt-10
    [:h2.section-heading.pt-4.text-sm
     [:span.font-iosevka.font-medium.uppercase.text-greenish "Features"]
-    [:a.text-greenish-60.font-inter.font-normal.ml-3 {:href "https://book.clerk.vision/"} "Learn more in the Book of Clerk"]]
+    [:a.text-greenish-60.font-inter.font-normal.ml-3 {:href "https://book.clerk.vision/"} " Learn more in the Book of Clerk"]]
    [:ul.font-medium.text-greenish.mt-10.md:grid.grid-cols-3.gap-6
     [:li
      [:div.flex.itesm-center.mb-4.text-greenish-60
-      {:class "h-[43px]"} emacs-icon]
+      {:class "h-[43px]" :aria-hidden "true"} emacs-icon]
      [:span.text-xl.font-iosevka "Bring Your Own Editor"]
      [:p.mt-2.text-sm.text-greenish-60
       "Clerk lets you keep using your favorite editor and complements the Clojure REPL. The REPL is a peephole. See the full picture with Clerk."]]
     [:li.mt-10.md:mt-0
      [:div.flex.itesm-center.mb-4.text-greenish-60
-      {:class "h-[43px]"} clojure-icon]
+      {:class "h-[43px]" :aria-hidden "true"} clojure-icon]
      [:span.text-xl.font-iosevka "Just Clojure Namespaces"]
      [:p.mt-2.text-sm.text-greenish-60
       "Use plain Clojure namespaces that you can easily put into version control and use as library code. For text-heavy documents, Clerk supports Markdown too."]]
     [:li.mt-10.md:mt-0
      [:div.flex.itesm-center.mb-4.text-greenish-60
-      {:class "h-[43px]"} bolt-icon]
+      {:class "h-[43px]" :aria-hidden "true"} bolt-icon]
      [:span.text-xl.font-iosevka "Incremental Computation"]
      [:p.mt-2.text-sm.text-greenish-60
       "Clerk keeps the feedback loop short by only computing what's changed using a dependency graph of Clojure vars. This enables caching executions across JVM restarts and machines."]]
     [:li.mt-10.md:mt-0
      [:div.flex.itesm-center.mb-4.text-greenish-60
-      {:class "h-[43px]"} eye-icon]
+      {:class "h-[43px]" :aria-hidden "true"} eye-icon]
      [:span.text-xl.font-iosevka "Rich Built-In Viewers"]
      [:p.mt-2.text-sm.text-greenish-60
       "Supports Markdown, Grid, HTML, Hiccup, SVG, Vega, Images, Plotly, TeX, tables, you name it. Plus, Clerk doesn't break a sweat when zooming into moderately-sized datasets."]]
     [:li.mt-10.md:mt-0
      [:div.flex.itesm-center.mb-4.text-greenish-60
-      {:class "h-[43px]"} compose-icon]
+      {:class "h-[43px]" :aria-hidden "true"} compose-icon]
      [:span.text-xl.font-iosevka "Moldable Viewers"]
      [:p.mt-2.text-sm.text-greenish-60
       "Create custom viewers for your problem at hand. Clerk's viewer API is extensible via predicate functions, not only acting on types but also on values. Build stateful viewers with Reagent and dynamically import JavaScript libraries."]]
     [:li.mt-10.md:mt-0
      [:div.flex.itesm-center.mb-4.text-greenish-60
-      {:class "h-[43px]"} publish-icon]
+      {:class "h-[43px]" :aria-hidden "true"} publish-icon]
      [:span.text-xl.font-iosevka "Static Publishing"]
      [:p.mt-2.text-sm.text-greenish-60
       "Produce static HTML pages and serve them from your local file system or any static webserver. If you like it batteries-included, take a look at "
@@ -230,28 +231,34 @@ a:hover { color: white; }
     "Clerk is compatible with any Clojure and JVM library enabling these amazing use cases by composing libraries from Clojure's eco-system."]
    [:div.mt-10.grid.grid-cols-1.md:grid-cols-3.gap-10.md:gap-6.text-sm
     [:a.group {:href "https://snapshots.nextjournal.com/clerk-demo/build/f8112d44fa742cd0913dcbd370919eca249cbcd9/notebooks/data_science.html"}
-     [:img {:src "https://cdn.nextjournal.com/data/QmWcxhxG6b2aMJSvkjkmBnRU2rNKCAhRB5rzMt8vvMwaHJ?filename=data-science.png&content-type=image/png"}]
+     [:img {:src "https://cdn.nextjournal.com/data/QmWcxhxG6b2aMJSvkjkmBnRU2rNKCAhRB5rzMt8vvMwaHJ?filename=data-science.png&content-type=image/png"
+            :alt "A heatmap chart."}]
      [:div.font-inter.text-greenish-60.mt-2.group-hover:text-white.transition-all
       [:p "Exploring the world in data using Vega, meta-csv and parsing Excel files with Docjure"]]]
     [:a.group {:href "https://snapshots.nextjournal.com/clerk-demo/build/f8112d44fa742cd0913dcbd370919eca249cbcd9/notebooks/semantic.html"}
-     [:img {:src "https://cdn.nextjournal.com/data/QmVuFkrm4t48jLn5zDMHC3JCttx9hiHQvGkWKaMAJqgyde?filename=semantic.png&content-type=image/png"}]
+     [:img {:src "https://cdn.nextjournal.com/data/QmVuFkrm4t48jLn5zDMHC3JCttx9hiHQvGkWKaMAJqgyde?filename=semantic.png&content-type=image/png"
+            :alt "An photo of a bird next to a map of South America. Some regions are marked."}]
      [:div.font-inter.text-greenish-60.mt-2.group-hover:text-white.transition-all "Semantic Queries against the world's knowledge in WikiData with Mundaneum"]]
     [:a.group {:href "https://snapshots.nextjournal.com/clerk-demo/build/f8112d44fa742cd0913dcbd370919eca249cbcd9/notebooks/sicmutils.html"}
-     [:img {:src "https://cdn.nextjournal.com/data/QmZbPhh4kburooGW6JKnSoaHvQAHn51uQ3W5V2QZgoYQhi?filename=double-pendulum.png&content-type=image/png"}]
+     [:img {:src "https://cdn.nextjournal.com/data/QmZbPhh4kburooGW6JKnSoaHvQAHn51uQ3W5V2QZgoYQhi?filename=double-pendulum.png&content-type=image/png"
+            :alt "Four graphs."}]
      [:div.font-inter.text-greenish-60.mt-2.group-hover:text-white.transition-all "Simulating physical systems with SICMUtils"]]
     [:a.group {:href "https://snapshots.nextjournal.com/clerk-demo/build/f8112d44fa742cd0913dcbd370919eca249cbcd9/notebooks/rule_30.html"}
-     [:img {:src "https://cdn.nextjournal.com/data/Qmb9vXz1MqewaRu3SDmx2a9ge5YzhCJ18JtzMTmgR26QnP?filename=rule-30.png&content-type=image/png"}]
+     [:img {:src "https://cdn.nextjournal.com/data/Qmb9vXz1MqewaRu3SDmx2a9ge5YzhCJ18JtzMTmgR26QnP?filename=rule-30.png&content-type=image/png"
+            :alt "A triangular structure on a grid."}]
      [:div.font-inter.text-greenish-60.mt-2.group-hover:text-white.transition-all "Playing with cellular automata and Clerk's moldable viewers API"]]
     [:a.group {:href "http://inside-out.matt.is"}
-     [:img {:src "https://cdn.nextjournal.com/data/QmTUbLE3QP37iKAxBx7CSjGuUu4CDHvjU8Gnk6QNpPCh2u?filename=docs.png&content-type=image/png"}]
+     [:img {:src "https://cdn.nextjournal.com/data/QmTUbLE3QP37iKAxBx7CSjGuUu4CDHvjU8Gnk6QNpPCh2u?filename=docs.png&content-type=image/png"
+            :alt "Screenshot of a notebook."}]
      [:div.font-inter.text-greenish-60.mt-2.group-hover:text-white.transition-all "Making inside-out's library documentation interactive with custom CLJS macros"]]
     [:a.group {:href "https://github.com/zampino/osc-spirograph/"}
-     [:img {:src "https://cdn.nextjournal.com/data/QmZHUCVDFnixs4vr4pxqnCuMjJhckZRm1mcYT9r3zY27qa?filename=spiro.png&content-type=image/png"}]
+     [:img {:src "https://cdn.nextjournal.com/data/QmZHUCVDFnixs4vr4pxqnCuMjJhckZRm1mcYT9r3zY27qa?filename=spiro.png&content-type=image/png"
+            :alt "A curve next to a phone displaying different controls."}]
      [:div.font-inter.text-greenish-60.mt-2.group-hover:text-white.transition-all "Controlling a spirograph animation using Open Sound Control and your iPhone"]]]
    [:div#quotes.mt-20
     [:h2.section-heading.pt-4.text-sm
      [:span.font-iosevka.font-medium.uppercase.text-greenish "Quotes"]
-     [:a.text-greenish-60.font-inter.font-normal.ml-3 {:href "https://twitter.com/search?q=clerk%20clojure&src=spelling_expansion_revert_click&f=live"} "See more on Twitter"]]
+     [:a.text-greenish-60.font-inter.font-normal.ml-3 {:href "https://twitter.com/search?q=clerk%20clojure&src=spelling_expansion_revert_click&f=live"} " See more on Twitter"]]
     [:div.grid.md:grid-cols-2.gap-6.mt-10
      [:div.twitter-card
       [:blockquote {:class "twitter-tweet", :data-theme "dark"}
