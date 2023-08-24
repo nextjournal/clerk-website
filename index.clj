@@ -290,6 +290,8 @@ a:hover { color: white; }
      [:span.font-iosevka.font-medium.uppercase.text-greenish "Talks"]]
     [:div.mt-10.grid.md:grid-cols-2.gap-6
      [:div.border-greenish-50
+      [:iframe {:width "100%", :height "315", :src "https://www.youtube.com/embed/B9kqD8vBuwU?si=46vTZzZT8C9uuTPL", :title "YouTube video player", :frameborder "0", :allow "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture", :allowfullscreen true}]]
+     [:div.border-greenish-50
       [:iframe {:width "100%", :height "315", :src "https://www.youtube.com/embed/3ANS2NTNgig", :title "YouTube video player", :frameborder "0", :allow "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture", :allowfullscreen true}]]
      [:div.border-greenish-50
       [:iframe {:width "100%", :height "315", :src "https://www.youtube.com/embed/8Ab3ArE8W3s", :title "YouTube video player", :frameborder "0", :allow "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture", :allowfullscreen true}]]
