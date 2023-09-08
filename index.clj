@@ -252,7 +252,7 @@ a:hover { color: white; }
     [:h2.section-heading.pt-4.text-sm
      [:span.font-iosevka.font-medium.uppercase.text-greenish "Quotes"]
      [:a.text-greenish-60.font-inter.font-normal.ml-3 {:href "https://twitter.com/search?q=clerk%20clojure&src=spelling_expansion_revert_click&f=live"} "See more on Twitter"]]
-    [:div.grid.md:grid-cols-2.gap-6.mt-10
+    [:div.grid.md:grid-cols-2.gap-6.mt-10.text-greenish-60
      [:div.twitter-card
       [:blockquote {:class "twitter-tweet", :data-theme "dark"}
        [:p {:lang "en", :dir "ltr"} "Huge shoutout to " 
@@ -262,15 +262,15 @@ a:hover { color: white; }
        [:a {:href "https://twitter.com/RobStuttaford/status/1574328589306281987?ref_src=twsrc%5Etfw"} "September 26, 2022"]]]
      [:div.twitter-card
       [:blockquote {:class "twitter-tweet", :data-theme "dark"}
-       [:p {:lang "en", :dir "ltr"} "Here&#39;s a fun " 
+       [:p {:lang "en", :dir "ltr"} "Here's a fun " 
         [:a {:href "https://twitter.com/hashtag/clojure?src=hash&ref_src=twsrc%5Etfw"} "#clojure"]" notebook with " 
-        [:a {:href "https://twitter.com/usenextjournal?ref_src=twsrc%5Etfw"} "@usenextjournal"]"&#39;s Clerk. Reactive UI, and changes you make in the browser save back to the file. I think there&#39;s some fun potential with an approach like this. My next steps will be to make the connection more reliable :) " 
+        [:a {:href "https://twitter.com/usenextjournal?ref_src=twsrc%5Etfw"} "@usenextjournal"]"'s Clerk. Reactive UI, and changes you make in the browser save back to the file. I think there's some fun potential with an approach like this. My next steps will be to make the connection more reliable :) " 
         [:a {:href "https://t.co/XAwWjCyht6"} "pic.twitter.com/XAwWjCyht6"]]"— adam-james (@RustyVermeer) " 
        [:a {:href "https://twitter.com/RustyVermeer/status/1544901494675099649?ref_src=twsrc%5Etfw"} "July 7, 2022"]]]
      [:div.twitter-card
       [:blockquote {:class "twitter-tweet", :data-conversation "none", :data-theme "dark"}
        [:p {:lang "en", :dir "ltr"} "- this is what " 
-        [:a {:href "https://twitter.com/girba?ref_src=twsrc%5Etfw"} "@girba"]" calls &quot;moldable development&quot; — thanks to work of " 
+        [:a {:href "https://twitter.com/girba?ref_src=twsrc%5Etfw"} "@girba"]" calls \"moldable development\" — thanks to work of " 
         [:a {:href "https://twitter.com/mkvlr?ref_src=twsrc%5Etfw"} "@mkvlr"]
         [:a {:href "https://twitter.com/jackrusher?ref_src=twsrc%5Etfw"} "@jackrusher"]" on Clerk, we can get similar dynamics of development as GT/Smalltalk" 
         [:br]
@@ -282,7 +282,7 @@ a:hover { color: white; }
      [:div.twitter-card
       [:blockquote {:class "twitter-tweet", :data-theme "dark"}
        [:p {:lang "en", :dir "ltr"} "Really impressed with how " 
-        [:a {:href "https://twitter.com/usenextjournal?ref_src=twsrc%5Etfw"} "@usenextjournal"]" progressed from being &quot;an alternative&quot; to being at the forefront of notebooks and by far the most Clojurey of them all. We really need work like that in the Clojure data ecosystem. " 
+        [:a {:href "https://twitter.com/usenextjournal?ref_src=twsrc%5Etfw"} "@usenextjournal"]" progressed from being \"an alternative\" to being at the forefront of notebooks and by far the most Clojurey of them all. We really need work like that in the Clojure data ecosystem. " 
         [:a {:href "https://t.co/hNf9vygq8S"} "https://t.co/hNf9vygq8S"]]"— Simon Belak (@sbelak) " 
        [:a {:href "https://twitter.com/sbelak/status/1409546462384603136?ref_src=twsrc%5Etfw"} "June 28, 2021"]]]]]
    [:div#talks.mt-20
