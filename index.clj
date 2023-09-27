@@ -163,7 +163,7 @@ a:hover { color: white; }
     [:li.mr-4
      [:a.flex.items-center {:href "http://github.com/nextjournal/clerk"} github-icon [:span.ml-2.hidden.md:inline "GitHub"]]]
     [:li [:a.flex.items-center {:href "http://github.com/nextjournal/clerk"} star-icon [:span.ml-2.hidden.md:inline "Star on GitHub"] stars-badge]]]]
-  [:div.mt-20.text-greenish.font-iosevka.flex.items-center
+  [:div.mt-20.text-greenish.font-iosevka.lg:flex.items-center
    [:div.lg:max-w-xl.xl:max-w-3xl
     [:h1.flex
      clerk-type
@@ -172,17 +172,21 @@ a:hover { color: white; }
      [:a.link-hairline {:href "https://moldabledevelopment.com" :target "_blank"} "Moldable"]" Live Programming for Clojure"]
     [:p.text-xl.md:text-2xl.font-light.mt-6
      "Clerk takes a Clojure namespace and turns it into a notebook. Learn more in the "
-     [:a.link-hairline {:href "https://book.clerk.vision/"} "Book of Clerk."]]]
-   [:figure.flex-auto.ml-10.text-center.hidden.lg:flex.flex-col.justify-center
-    clerk-logo
-    [:figcaption.text-greenish-60.mt-4.text-xs.font-inter
+     [:a.link-hairline {:href "https://book.clerk.vision/"} "Book\u00A0of\u00A0Clerk"]
+     " or " [:a.link-hairline {:href "https://px23.clerk.vision/"} "read our paper."]]]
+   [:figure.flex-auto.lg:ml-10.lg:text-center.lg:flex.flex-col.justify-center
+    [:div.hidden.lg:block clerk-logo]
+    [:figcaption.text-greenish-60.mt-8.lg:mt-4.text-sm.lg:text-xs.font-inter
      "Clerk logo by Jack Rusher."
-     [:br]
-     [:a.link-hairline.text-greenish-60 {:href "https://github.clerk.garden/nextjournal/clerk-demo/commit/cb212b2edc64e762bcd1af56417ef9f6b2fde5b1/notebooks/logo.html"} "See notebook here."]]]]
+     [:br.hidden.lg:block]
+     [:a.link-hairline.text-greenish-60.ml-1.lg:ml-0 {:href "https://github.clerk.garden/nextjournal/clerk-demo/commit/cb212b2edc64e762bcd1af56417ef9f6b2fde5b1/notebooks/logo.html"} "See notebook here."]]]]
   [:div#features.mt-10
    [:h2.section-heading.pt-4.text-sm
     [:span.font-iosevka.font-medium.uppercase.text-greenish "Features"]
-    [:a.text-greenish-60.font-inter.font-normal.ml-3 {:href "https://book.clerk.vision/"} "Learn more in the Book of Clerk"]]
+    [:span.text-greenish-60.font-inter.font-normal.ml-3
+     "Learn more in the "
+     [:a.link-hairline {:href "https://book.clerk.vision/"} "Book of Clerk"]
+     " or " [:a.link-hairline {:href "https://px23.clerk.vision/"} "read our paper"]]]
    [:ul.font-medium.text-greenish.mt-10.md:grid.grid-cols-3.gap-6
     [:li
      [:div.flex.itesm-center.mb-4.text-greenish-60
@@ -225,7 +229,9 @@ a:hover { color: white; }
   [:div#use-cases.mt-20
    [:h2.section-heading.pt-4.text-sm
     [:span.font-iosevka.font-medium.uppercase.text-greenish "Use Cases"]
-    [:a.text-greenish-60.font-inter.font-normal.ml-3 {:href "https://github.com/nextjournal/clerk-demo"} "See Clerk Demos Repository"]]
+    [:span.text-greenish-60.font-inter.font-normal.ml-3
+     "See "
+     [:a.link-hairline {:href "https://github.com/nextjournal/clerk-demo"} "Clerk Demos Repository"]]]
    [:p.text-xl.font-iosevka.text-greenish.mt-10.max-w-xl
     "Clerk is compatible with any Clojure and JVM library enabling these amazing use cases by composing libraries from Clojure's eco-system."]
    [:div.mt-10.grid.grid-cols-1.md:grid-cols-3.gap-10.md:gap-6.text-sm
@@ -251,7 +257,9 @@ a:hover { color: white; }
    [:div#quotes.mt-20
     [:h2.section-heading.pt-4.text-sm
      [:span.font-iosevka.font-medium.uppercase.text-greenish "Quotes"]
-     [:a.text-greenish-60.font-inter.font-normal.ml-3 {:href "https://twitter.com/search?q=clerk%20clojure&src=spelling_expansion_revert_click&f=live"} "See more on Twitter"]]
+     [:span.text-greenish-60.font-inter.font-normal.ml-3
+      "See more "
+      [:a.link-hairline {:href "https://twitter.com/search?q=clerk%20clojure&src=spelling_expansion_revert_click&f=live"} "on Twitter"]]]
     [:div.grid.md:grid-cols-2.gap-6.mt-10
      [:div.twitter-card
       [:blockquote {:class "twitter-tweet", :data-theme "dark"}
@@ -295,6 +303,8 @@ a:hover { color: white; }
       [:iframe {:width "100%", :height "315", :src "https://www.youtube.com/embed/3ANS2NTNgig", :title "YouTube video player", :frameborder "0", :allow "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture", :allowfullscreen true}]]
      [:div.border-greenish-50
       [:iframe {:width "100%", :height "315", :src "https://www.youtube.com/embed/8Ab3ArE8W3s", :title "YouTube video player", :frameborder "0", :allow "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture", :allowfullscreen true}]]
+     [:div.border-greenish-50
+      [:iframe {:width "100%", :height "315", :src "https://www.youtube.com/embed/3bs3QX92kYA", :title "YouTube video player", :frameborder "0", :allow "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture", :allowfullscreen true}]]
      [:div.border-greenish-50
       [:iframe {:width "100%", :height "315", :src "https://www.youtube.com/embed/Gnrh7XOt_84", :title "YouTube video player", :frameborder "0", :allow "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture", :allowfullscreen true}]]
      [:div.border-greenish-50
